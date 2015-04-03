@@ -27,6 +27,7 @@
 //EEG
 #define MINDWAVE_EEG_SIZE				 8
 #define MINDWAVE_PACKET_MAX_SIZE		 173
+#define MINDWAVE_PAYLOAD_MAX_SIZE		 169
 
 typedef void (*MindwaveDataCallback) ();
 
@@ -35,6 +36,7 @@ class Mindwave
 
 
   public:
+
     Mindwave();
     void update(Stream &stream,MindwaveDataCallback onData);
     int  attention();
@@ -42,14 +44,14 @@ class Mindwave
     int  quality();
     long lastUpdate();
     int* eeg();
-    int delta();
-    int theta();
-    int lowAlpha();
-    int highAlpha();
-    int lowBeta();
-    int highBeta();
-    int lowGamma();
-    int midGamma();
+    int  delta();
+    int  theta();
+    int  lowAlpha();
+    int  highAlpha();
+    int  lowBeta();
+    int  highBeta();
+    int  lowGamma();
+    int  midGamma();
   private:
     // checksum variables
     byte _generatedChecksum = 0;
@@ -65,7 +67,6 @@ class Mindwave
     // system variables
     long _lastReceivedPacket = 0, _lastUpdate = 0;
     boolean _bigPacket = false;
-    
     int _state = 0;
     
     void parsePayload(MindwaveDataCallback onData);
