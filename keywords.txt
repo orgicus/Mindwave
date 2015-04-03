@@ -1,0 +1,17 @@
+Mindwave	KEYWORD1
+MINDWAVE_BAUDRATE	KEYWORD1
+#define MINDWAVE_EEG_SIZE	KEYWORD1
+update(Stream &stream,MindwaveDataCallback onData)
+attention	KEYWORD2
+meditation	KEYWORD2
+quality	KEYWORD2
+lastUpdate	KEYWORD2
+eeg	KEYWORD2
+delta	KEYWORD2
+theta	KEYWORD2
+lowAlpha	KEYWORD2
+highAlpha	KEYWORD2
+lowBeta	KEYWORD2
+highBeta	KEYWORD2
+lowGamma	KEYWORD2
+midGamma	KEYWORD2
