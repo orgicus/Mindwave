@@ -7,10 +7,32 @@ How to install the library
 ==========================
 
 1. [Download the library](https://github.com/orgicus/Mindwave/archive/master.zip)
-2. Unzip Mindwave-master.zip
-3. Rename the Mindwave-master folder to the Mindwave
-4. Move the freshly rename Mindwave folder into the Documents/Arduino/libraries and restart Arduino
-5. Try the examples (via Arduino > File > Examples > Mindwave)
+2. Unzip **Mindwave-master.zip** and rename the **Mindwave-master** folder to the **Mindwave**
+4. Move the freshly rename **Mindwave** folder into the **Documents/Arduino/libraries** and restart Arduino
+
+
+How to use the library
+==========================
+If you're using the Serial class and simply want to get the attention value,
+it's as simple as this
+```
+#include <Mindwave.h>					//import the library
+Mindwave mindwave;						//start using it
+
+void setup() {
+  Serial.begin(MINDWAVE_BAUDRATE);		//setup serial communication (MindWave mobile is set to 57600 baud rate)
+}
+//create a function to received new values as soon as they're avaialble
+void onMindwaveData(){
+  Serial.print("\tattention: ");
+  Serial.println(mindwave.attention()); //access attention value
+}
+void loop() {
+  mindwave.update(Serial,onMindwaveData);//update using the data input(Serial in this case) and the function to call when data is ready
+}
+```
+
+For more examples go to **Arduino > File > Examples > Mindwave**
 
 Notes
 =====
