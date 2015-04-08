@@ -15,7 +15,7 @@ How to use the library
 ==========================
 If you're using the Serial class and simply want to get the attention value,
 it's as simple as this
-```
+``` cpp
 #include <Mindwave.h>					//import the library
 Mindwave mindwave;						//start using it
 
