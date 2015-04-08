@@ -24,7 +24,7 @@ void setup() {
 }
 //create a function to received new values as soon as they're avaialble
 void onMindwaveData(){
-  Serial.print("\tattention: ");
+  Serial.print("attention: ");
   Serial.println(mindwave.attention()); //access attention value
 }
 void loop() {
