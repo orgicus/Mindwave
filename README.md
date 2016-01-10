@@ -40,11 +40,11 @@ Notes
 Be aware, this is my first Arduino library, so things might not be 100% top-notch.
 The code is mostly based on the [official NeuroSky wiki article](http://developer.neurosky.com/docs/doku.php?id=mindwave_mobile_and_arduino) and the [ThinkGear protocol specs](http://developer.neurosky.com/docs/doku.php?id=thinkgear_communications_protocol#bit_raw_wave_value)
 
-However, it was developed for the **Walk With Me** project.
+However, it was developed for the **Focus** project.
 This is is covered on the following websites:
- * [Ditte Blohm](http://ditteblohm.com/WALK-WITH-ME)
+ * [Ditte Blohm](http://ditteblohm.com/FOCUS)
  * [Hirsch & Mann](http://www.hirschandmann.com/walking-in-comfort-at-milan-furniture-fair/)
- * [Hackaday.io](https://hackaday.io/project/5969-walk-with-me)
+ * [Hackaday.io](https://hackaday.io/project/5969-focus)
 
  ![Walk With Me](https://cdn.hackaday.io/images/2043671432588591267.jpg)
  ![Walk With Me](https://cdn.hackaday.io/images/8390241432588613274.jpg)
