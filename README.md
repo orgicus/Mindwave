@@ -16,19 +16,43 @@ How to use the library
 If you're using the Serial class and simply want to get the attention value,
 it's as simple as this
 ``` cpp
-#include <Mindwave.h>					//import the library
-Mindwave mindwave;						//start using it
+#include "Arduino.h"
+#include "Mindwave.h"
+
+Mindwave mindwave;
 
 void setup() {
-  Serial.begin(MINDWAVE_BAUDRATE);		//setup serial communication (MindWave mobile is set to 57600 baud rate)
+  Serial.begin(115200);
+  Serial.println("Start");
+  Serial2.begin(MINDWAVE_BAUDRATE);
 }
-//create a function to received new values as soon as they're avaialble
-void onMindwaveData(){
-  Serial.print("attention: ");
-  Serial.println(mindwave.attention()); //access attention value
+
+void onMindwaveBlink() {
+ if (mindwave.blink() == 1) {
+    Serial.println();
+    Serial.println("Single Blink!");
+    Serial.println();   
+  }
+  
+  if (mindwave.blink() == 2) {
+    Serial.println();
+    Serial.println("Double Blink!");
+    Serial.println();
+  }
 }
+
+void onMindwaveData() {
+  Serial.print("Quality: ");
+  Serial.println(mindwave.quality());
+  Serial.print("Attention: ");
+  Serial.println(mindwave.attention());
+  Serial.print("Meditation: ");
+  Serial.println(mindwave.meditation());  
+  Serial.println();
+}
+
 void loop() {
-  mindwave.update(Serial,onMindwaveData);//update using the data input(Serial in this case) and the function to call when data is ready
+  mindwave.update(Serial2, onMindwaveData, onMindwaveBlink);
 }
 ```
 
