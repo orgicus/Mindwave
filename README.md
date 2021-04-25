@@ -14,14 +14,14 @@ How to install the library
 2. Unzip **Mindwave-master.zip** and rename the **Mindwave-master** folder to the **Mindwave**
 4. Move the freshly renamed **Mindwave** folder into the **Documents/Arduino/libraries** and restart Arduino
 
-Alternatively you can simply copy the two files "Mindwave.h" and "Mindwave.cpp" to your sketch folder.
+Alternatively, you can simply copy the two files "Mindwave.h" and "Mindwave.cpp" to your sketch folder.
 
 How to use the library
 ==========================
 If you're using the Serial class and simply want to get the attention/meditation values,
 it's as simple as this.
 
-The example includes also blink detection. Single and double blink detection.
+The example includes also eye blink detection. Single and double blink detection.
 
 In the example a HC-05 is connected to Serial2 on an ESP32. But it should work for all Arduino/ESP boards using the Serial Class.
 
