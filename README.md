@@ -73,5 +73,5 @@ Notes
 
 The code is mostly based on the [official NeuroSky wiki article](http://developer.neurosky.com/docs/doku.php?id=mindwave_mobile_and_arduino) and the [ThinkGear protocol specs](http://developer.neurosky.com/docs/doku.php?id=thinkgear_communications_protocol#bit_raw_wave_value)
 
-Blink detection is based on this work: https://github.com/sumitnathtiwari/Eye_Blink
+Blink detection is based on the code shown here: https://github.com/orgicus/Mindwave/issues/5
 
