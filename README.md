@@ -2,6 +2,8 @@ Mindwave Mobile Parser
 ======================
 
 Simple parser for Mindwave Mobile EEG headsets.
+This is a fork from orgicus master branch.
+The new version includes now also blink dtection!
 
 How to install the library
 ==========================
@@ -14,7 +16,10 @@ How to install the library
 How to use the library
 ==========================
 If you're using the Serial class and simply want to get the attention value,
-it's as simple as this
+it's as simple as this.
+
+The example includes also blink detection. A HC-05 is connected to Serial2 in this case.
+
 ``` cpp
 #include "Arduino.h"
 #include "Mindwave.h"
