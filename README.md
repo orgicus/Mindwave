@@ -25,7 +25,7 @@ it's as simple as shown below.
 
 The example includes also eye blink detection. Single and double blink detection.
 
-In the example a HC-05 Bloetooth module is connected to Serial2 on an ESP32. But it should work for all Arduino/ESP boards using the Serial class.
+In the example a HC-05 Bluetooth module is connected to Serial2 on an ESP32. But it should work for all Arduino/ESP boards using the Serial class.
 
 [Here](https://github.com/Thought-Controlled-Machine/TCM-REP/wiki/Configuring-HC05-for-Mindwave-Mobile-&-Data-Transfer) is explained how to prepare the HC-05 for connecting to the headset.
 
