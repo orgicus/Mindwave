@@ -3,6 +3,8 @@ Mindwave Mobile Parser
 
 Simple parser for [Mindwave Mobile](https://store.neurosky.com/pages/mindwave) EEG headsets.
 
+![Headset](http://neurosky.com/wp-content/uploads/2018/04/mindwave-mobile-headset1-300x300.jpg)
+
 This is a fork from orgicus master branch: https://github.com/orgicus/Mindwave
 
 The new version includes now also eye blink detection!
