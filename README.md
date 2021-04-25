@@ -19,7 +19,7 @@ Alternatively, you can simply copy the two files "Mindwave.h" and "Mindwave.cpp"
 How to use the library
 ==========================
 If you're using the Serial class and simply want to get the attention/meditation values,
-it's as simple as this.
+it's as simple as shown below.
 
 The example includes also eye blink detection. Single and double blink detection.
 
