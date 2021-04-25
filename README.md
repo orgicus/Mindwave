@@ -1,7 +1,7 @@
 Mindwave Mobile Parser
 ======================
 
-Simple parser for Mindwave Mobile EEG headsets.
+Simple parser for [Mindwave Mobile](https://store.neurosky.com/pages/mindwave) EEG headsets.
 
 This is a fork from orgicus master branch: https://github.com/orgicus/Mindwave
 
