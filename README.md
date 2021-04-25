@@ -5,7 +5,7 @@ Simple parser for Mindwave Mobile EEG headsets.
 
 This is a fork from orgicus master branch: https://github.com/orgicus/Mindwave
 
-The new version includes now also blink dtection!
+The new version includes now also eye blink dtection!
 
 How to install the library
 ==========================
@@ -14,6 +14,7 @@ How to install the library
 2. Unzip **Mindwave-master.zip** and rename the **Mindwave-master** folder to the **Mindwave**
 4. Move the freshly rename **Mindwave** folder into the **Documents/Arduino/libraries** and restart Arduino
 
+Alternatively you can simply copy the two files "Mindwave.h" and "Mindwave.cpp" to you sketch folder.
 
 How to use the library
 ==========================
