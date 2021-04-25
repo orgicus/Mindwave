@@ -14,7 +14,7 @@ How to install the library
 2. Unzip **Mindwave-master.zip** and rename the **Mindwave-master** folder to the **Mindwave**
 4. Move the freshly rename **Mindwave** folder into the **Documents/Arduino/libraries** and restart Arduino
 
-Alternatively you can simply copy the two files "Mindwave.h" and "Mindwave.cpp" to you sketch folder.
+Alternatively you can simply copy the two files "Mindwave.h" and "Mindwave.cpp" to your sketch folder.
 
 How to use the library
 ==========================
