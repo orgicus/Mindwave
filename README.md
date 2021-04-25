@@ -2,7 +2,7 @@ Mindwave Mobile Parser
 ======================
 
 Simple parser for Mindwave Mobile EEG headsets.
-This is a fork from orgicus master branch.
+This is a fork from orgicus master branch: https://github.com/orgicus/Mindwave
 The new version includes now also blink dtection!
 
 How to install the library
