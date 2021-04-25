@@ -66,7 +66,8 @@ void onMindwaveData() {
 }
 
 void loop() {
-  mindwave.update(Serial2, onMindwaveData, onMindwaveBlink);
+  //mindwave.update(Serial2, onMindwaveData);    // This works without blink detection 
+  mindwave.update(Serial2, onMindwaveData, onMindwaveBlink); // This with blink detection. onMindwaveBlink is an optional parameter.
 }
 ```
 
