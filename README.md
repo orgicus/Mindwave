@@ -18,10 +18,12 @@ Alternatively you can simply copy the two files "Mindwave.h" and "Mindwave.cpp" 
 
 How to use the library
 ==========================
-If you're using the Serial class and simply want to get the attention value,
+If you're using the Serial class and simply want to get the attention/meditation values,
 it's as simple as this.
 
-The example includes also blink detection. A HC-05 is connected to Serial2 in this case.
+The example includes also blink detection. Single and double blink detection.
+
+In the example a HC-05 is connected to Serial2 on an ESP32. But it should work for all Arduino/ESP boards using the Serial Class.
 
 ``` cpp
 #include "Arduino.h"
