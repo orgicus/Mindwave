@@ -5,7 +5,7 @@ Mindwave::Mindwave() {}
 void Mindwave::update(Stream &stream, MindwaveDataCallback onData, MindwaveBlinkCallback onBlink) {
 
   if ((millis() - piekTime) > 450 && piekDetected == true) {
-    onBlink();
+    if(onBlink != NULL) onBlink();
     piekDetected = false;
   }
 
@@ -95,7 +95,7 @@ void Mindwave::parsePayload(MindwaveDataCallback onData, MindwaveBlinkCallback o
               if (PiekM < -3000 && PiekM > -11000) {
 
                 if ((millis() - piekTime) < 400)_n++; else _n = 1;
-                piekTime = millis();  //piekTime is the time at which the eye blink has been detected
+                piekTime = millis();  // piekTime is the time at which the eye blink has been detected
                 piekDetected = true;  // piekDetected is set true, when an eye blink has been detected
 
               }// end if PiekM (eyeblink detected)
@@ -181,4 +181,6 @@ int Mindwave::midGamma() {
 
 int Mindwave::blink() {
   return _n;
+
+
 }

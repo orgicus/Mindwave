@@ -25,7 +25,7 @@
 #define MINDWAVE_WAIT_FOR_PAYLOAD        3
 #define MINDWAVE_WAIT_FOR_CHECKSUM       4
 //EEG
-#define MINDWAVE_EEG_SIZE				 8
+#define MINDWAVE_EEG_SIZE				     8
 #define MINDWAVE_PACKET_MAX_SIZE		 173
 #define MINDWAVE_PAYLOAD_MAX_SIZE		 169
 
@@ -37,7 +37,7 @@ class Mindwave
   public:
 
     Mindwave();
-    void update(Stream &stream, MindwaveDataCallback onData, MindwaveBlinkCallback onBlink);
+    void update(Stream &stream, MindwaveDataCallback onData, MindwaveBlinkCallback onBlink=NULL);
     int  attention();
     int  meditation();
     int  quality();
@@ -80,7 +80,6 @@ class Mindwave
     int _state = 0;
 
     void parsePayload(MindwaveDataCallback onData, MindwaveBlinkCallback onBlink);
-
-};
+    };
 
 #endif
