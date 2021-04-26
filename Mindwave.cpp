@@ -9,7 +9,7 @@ void Mindwave::update(Stream &stream, MindwaveDataCallback onData, MindwaveBlink
     piekDetected = false;
   }
 
-  if (stream.available() > 0) {
+  while (stream.available()) {
     switch (_state) {
       case MINDWAVE_WAIT_FOR_FIRST_A:
         if (stream.read() == 0xAA) _state = MINDWAVE_WAIT_FOR_SECOND_A;
