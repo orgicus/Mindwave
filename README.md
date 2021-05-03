@@ -23,7 +23,7 @@ How to use the library
 If you're using the Serial class and simply want to get the attention/meditation values,
 it's as simple as shown below.
 
-The example includes also eye blink detection. Single and double blink detection.
+The example includes also eye blink detection. Single and double blink detection is implemented.
 
 In the example a HC-05 Bluetooth module is connected to Serial2 on an ESP32. But it should work for all Arduino/ESP boards using the Serial class.
 
