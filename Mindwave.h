@@ -10,10 +10,10 @@
 
 #include <inttypes.h>
 #if defined(ARDUINO) && ARDUINO >= 100
-  #include "Arduino.h"
+#include "Arduino.h"
 #else
-  #include "WProgram.h"
-  #include <pins_arduino.h>
+#include "WProgram.h"
+#include <pins_arduino.h>
 #endif
 
 //baud rate
@@ -25,20 +25,19 @@
 #define MINDWAVE_WAIT_FOR_PAYLOAD        3
 #define MINDWAVE_WAIT_FOR_CHECKSUM       4
 //EEG
-#define MINDWAVE_EEG_SIZE				 8
+#define MINDWAVE_EEG_SIZE				     8
 #define MINDWAVE_PACKET_MAX_SIZE		 173
 #define MINDWAVE_PAYLOAD_MAX_SIZE		 169
 
 typedef void (*MindwaveDataCallback) ();
+typedef void (*MindwaveBlinkCallback) ();
 
 class Mindwave
 {
-
-
   public:
 
     Mindwave();
-    void update(Stream &stream,MindwaveDataCallback onData);
+    void update(Stream &stream, MindwaveDataCallback onData, MindwaveBlinkCallback onBlink=NULL);
     int  attention();
     int  meditation();
     int  quality();
@@ -52,25 +51,35 @@ class Mindwave
     int  highBeta();
     int  lowGamma();
     int  midGamma();
+    int  blink();
+  
   private:
+    // blink detection  variables
+    bool piekDetected = false;
+    unsigned long piekTime = 0;
+    int Data[512] = {0};
+    int _i = 0, _n = 0;
+    int PiekP, PiekM;
+    long Hilf = 0;
+    
     // checksum variables
     byte _generatedChecksum = 0;
-    byte _checksum = 0; 
+    byte _checksum = 0;
     int  _payloadLength = 0;
     int  _payloadIndex;
     byte _payloadData[MINDWAVE_PACKET_MAX_SIZE] = {0};
-    
+
     byte _poorQuality = 0;
     byte _attention;
     byte _meditation;
+        
     int  _eeg[MINDWAVE_EEG_SIZE];
     // system variables
     long _lastReceivedPacket = 0, _lastUpdate = 0;
     boolean _bigPacket = false;
     int _state = 0;
-    
-    void parsePayload(MindwaveDataCallback onData);
 
-};
+    void parsePayload(MindwaveDataCallback onData, MindwaveBlinkCallback onBlink);
+    };
 
 #endif
