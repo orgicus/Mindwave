@@ -7,7 +7,7 @@ Simple parser for [Mindwave Mobile](https://store.neurosky.com/pages/mindwave) E
 
 This is a fork from orgicus master branch: https://github.com/orgicus/Mindwave
 
-The new version includes now also eye blink detection!
+The new version includes now also **eye blink detection**!
 
 How to install the library
 ==========================
